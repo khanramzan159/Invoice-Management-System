@@ -99,14 +99,21 @@ WSGI_APPLICATION = 'loginsystem.wsgi.application'
 # }
 
 # configuring mysql database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'UserManagement',
+#         'USER': 'root',
+#         'PASSWORD': 'ramzan216102',
+#         'HOST': 'localhost',  # or the hostname where your MySQL server is running
+#         'PORT': '3306',      # or the port on which your MySQL server is listening
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'UserManagement',
-        'USER': 'root',
-        'PASSWORD': 'ramzan216102',
-        'HOST': 'localhost',  # or the hostname where your MySQL server is running
-        'PORT': '3306',      # or the port on which your MySQL server is listening
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
